@@ -1,19 +1,33 @@
-# tip-mexico
+## Synopsis
 
+Este proyecto basado en Node 12 y Express 4, para el desarrollo de Api Rest
+[NodeJs](https://nodejs.org/es/) 
 
+## Motivation
 
-[![build status](https://secure.travis-ci.org//tip-mexico.png)](http://travis-ci.org//tip-mexico)
+Se generó una estructura base, independiente de cualquier IDE o lenguaje de programación ajeno a javascript.
+
+## Editores y extensiones
+
+Se recomienda el uso de [Visual Studio Code](https://code.visualstudio.com/) aunque se puede trabajar con el editor de su preferencia.
 
 ## Installation
 
-This module is installed via npm:
+Instalar la version 12.xx.xx de [NodeJs](https://nodejs.org/es/)
+En el directorio donde se descarga el repositorio ejecutar:
 
-``` bash
-$ npm install tip-mexico
-```
+`npm install` instala las dependencias necesarias
 
-## Example Usage
+###Para arrancar el proyecto
 
-``` js
-var tipMexico = require('tip-mexico');
-```
+`npm run start` despliega la aplicación en modo desarrollo
+
+
+## Contributors
+
+Javier Rodríguez
+[francisco.rodriguez@axity.com]
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
