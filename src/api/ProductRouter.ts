@@ -8,22 +8,22 @@ const router: Router = Router();
 
 /**
  * GET method route
- * @example http://localhost:PORT/users
+ * @example http://localhost:PORT/products
  * @swagger
- * /users/:
+ * /productos/:
  *  post:
- *    description: Get all Users
- *    tags: ["Users"]
+ *    description: Get all Products
+ *    tags: ["Products"]
  *    responses:
  *      200:
- *        description: All Users
+ *        description: All Products
  *        content:
  *          appication/json:
  *            example:
  *              status: 200
- *              message: Users
+ *              message: Products
  */
-router.get('/users', ProductFacade.findAll);
+router.get('/products', ProductFacade.findAll);
 
 /**
  * GET method route
