@@ -26,3 +26,21 @@ export async function save(req: Request, res: Response, next: NextFunction): Pro
         next(error);
     }
 }
+
+export async function update(req: Request, res: Response, next: NextFunction): Promise < void > {
+    try {
+        const response = await ProductFacade.update(Number(req.params.id), req.body);
+        res.status(HttpStatusCode.OK).json(response);
+    } catch (error) {
+        next(error);
+    }
+}
+
+export async function remove(req: Request, res: Response, next: NextFunction): Promise < void > {
+    try {
+        const response = await ProductFacade.remove(Number(req.params.id));
+        res.status(HttpStatusCode.OK).json(response);
+    } catch (error) {
+        next(error);
+    }
+}

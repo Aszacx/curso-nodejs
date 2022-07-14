@@ -10,12 +10,12 @@ describe('ProductFacade Test', () => {
     before('Init', async() => {
         await db.sync({ force: true});
         Product.create({
-        id: 1,
-        name: 'test',
-        description: 'description',
-        qty: 10,
-        createdAt: '2020-01-01',
-        updatedAt: '2020-01-01'
+            id: 1,
+            name: 'test',
+            description: 'description',
+            qty: 10,
+            createdAt: '2020-01-01',
+            updatedAt: '2020-01-01'
         });
     });
   
@@ -37,6 +37,24 @@ describe('ProductFacade Test', () => {
                 updatedAt: '2020-01-01'
             }
             const Product: any = await ProductFacade.save(data);
+            expect(200).equal(Product.status);
+        });
+    });
+
+    describe('Update Product', () => {
+        it('should product updated', async () => {
+            let data = {
+                description: "Descipcion Actualizada",
+                qty: 25
+            }
+            const Product: any = await ProductFacade.update(1, data);
+            expect(200).equal(Product.status);
+        });
+    });
+
+    describe('Delete Product', () => {
+        it('should deleted product', async () => {
+            const Product: any = await ProductFacade.remove(1);
             expect(200).equal(Product.status);
         });
     });

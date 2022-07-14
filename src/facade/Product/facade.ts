@@ -20,6 +20,16 @@ const ProductFacade: IProductFacade = {
     async save(data:any): Promise<any[]> {
         let Product = await ProductService.save(data);
         return Product;
+    },
+
+    async update(id: number, data:any): Promise<any[]> {
+        let Product = await ProductService.update(id, data);
+        return Product;
+    },
+
+    async remove(id: number): Promise<any[]> {
+        let Product = await ProductService.remove(id);
+        return Product;
     }
 }
 

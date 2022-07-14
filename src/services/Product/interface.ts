@@ -11,4 +11,8 @@ export interface IProductService {
      */
     findAll(): Promise<any[]>;
     save(data: any): Promise<any[]>;
+    update(id: number, data: any): Promise<any[]>;
+    remove(id: number): Promise<any[]>;
+
+
 }
