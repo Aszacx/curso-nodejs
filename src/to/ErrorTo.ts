@@ -1,11 +1,11 @@
 /**
  * @export
- * @class ErrorTO
+ * @class ErrorTo
  *
  * @swagger
  * components:
  *  schemas:
- *    Error:
+ *    ErrorTo:
  *      type: object
  *      properties:
  *        errorCode:

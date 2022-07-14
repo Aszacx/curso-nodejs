@@ -39,6 +39,7 @@ const development: IConfig = {
         GROUP_ID: process.env.GROUP_ID || 'test-app',
         BROKER: process.env.BROKER || 'localhost:9092'
     },
+
     secret: process.env.SECRET || '@QEGTUI'
 };
 

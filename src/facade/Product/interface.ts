@@ -10,4 +10,5 @@ export interface IProductFacade {
      * @memberof IProductFacade
      */
     findAll(): Promise<any[]>;
+    save(data: any): Promise<any[]>;
 }

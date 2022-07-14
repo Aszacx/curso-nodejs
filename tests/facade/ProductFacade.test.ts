@@ -25,4 +25,20 @@ describe('ProductFacade Test', () => {
             expect(1).equal(Product.length);
         });
     });
+
+    describe('Create Product', () => {
+        it('should return last product created', async () => {
+            let data = {
+                id: 2,
+                name: "Producto 1",
+                description: "Descripcion Uno",
+                qty: 10,
+                createdAt: '2020-01-01',
+                updatedAt: '2020-01-01'
+            }
+            const Product: any = await ProductFacade.save(data);
+            expect(200).equal(Product.status);
+        });
+    });
+    
 });

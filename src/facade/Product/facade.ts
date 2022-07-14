@@ -15,6 +15,11 @@ const ProductFacade: IProductFacade = {
 
         let Product = await ProductService.findAll();
         return Product;
+    },
+
+    async save(data:any): Promise<any[]> {
+        let Product = await ProductService.save(data);
+        return Product;
     }
 }
 

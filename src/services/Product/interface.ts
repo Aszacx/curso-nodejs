@@ -10,4 +10,5 @@ export interface IProductService {
      * @memberof IProductService
      */
     findAll(): Promise<any[]>;
+    save(data: any): Promise<any[]>;
 }

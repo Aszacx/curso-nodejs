@@ -17,3 +17,12 @@ export async function findAll(req: Request, res: Response, next: NextFunction): 
         next(error);
     }
 }
+
+export async function save(req: Request, res: Response, next: NextFunction): Promise < void > {
+    try {
+        const response = await ProductFacade.save(req.body);
+        res.status(HttpStatusCode.OK).json(response);
+    } catch (error) {
+        next(error);
+    }
+}
